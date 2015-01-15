@@ -1,8 +1,15 @@
 Crm::Application.routes.draw do
-  get "welcome/index"
-  get "welcome/customer"
- 
-root to: 'welcome#customer'
+ # get "customer/index"
+ # get "customer/show"
+ # get "customer/new"
+ # get "customer/edit"
+ # get "welcome/index"
+ # get "welcome/customer"
+  resources :customer
+
+get 'customer' => 'customer#index'
+
+root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
